@@ -8,6 +8,7 @@ Project 5: Mapa do bairro
 
 Este projeto é uma pagina Web, contruida com JS/Knockout com API Google MAP e API OpenWeather, que apresenta alguns aeroportos do estado do Rio de Janeiro. Quando o usuário clica no marcador do aeroporto abre uma janela com as informações meteorológicas locais como visibilidade, temperatura, velocidade e direção do vento. É possivel realizar um filtro pelo nome do aeroporto, visualizando o resultado do filtr diretamento no mapa.
 
+![alt text](https://github.com/lrib/Udacity_neighborhoodmap-5/blob/master/img/web.PNG?raw=true)
 
 Pre-requisitos
 ------------
