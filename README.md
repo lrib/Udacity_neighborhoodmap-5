@@ -13,7 +13,8 @@ Pre-requisitos
 ------------
 Foi utilizado nesta solução:
 - Google Map API
-- OpenWeather API- HTML5
+- OpenWeather API
+- HTML5
 - CSS3
 - JS
 - KnockoutJS 
@@ -31,8 +32,12 @@ A pagina abre sem erro e o usuario pode verificar no mapa os principais aeroport
 
 Fontes consultadas
 ---------
-https://www.w3schools.com 
-https://openweathermap.org/api 
-https://developers.google.com/maps/documentation/javascript/tutorial 
+https://www.w3schools.com
+
+https://openweathermap.org/api
+
+https://developers.google.com/maps/documentation/javascript/tutorial
+
 https://knockoutjs.com/documentation/introduction.html 
+
 https://getbootstrap.com/docs/4.3/getting-started/introduction/ 
