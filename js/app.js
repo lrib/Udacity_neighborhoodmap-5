@@ -56,15 +56,15 @@ function initApp () {
 				success: function (result) {
 					newIcon = "http://openweathermap.org/img/wn/" + result.weather[0].icon + ".png";
 					//Atualiza o variavel contentString com as informacoes da API.
-					contentString = "<span class='info'>" + title_inside + " </span> <br>" +
-									"<span class='info'> Weather: "	+ result.weather[0].main + "</span> <br>" +
-									"<img src= " + newIcon + "> <br>" +
-									"<span class='info'> Visibility: " + result.visibility + " m </span> <br>" +
-									"<span class='info'> Temperature: " + result.main.temp + "&deg;C </span> <br>" +
-									"<span class='info'> Min temperature: " + result.main.temp_min + "&deg;C </span> <br>" +
-									"<span class='info'> Max temperature: " + result.main.temp_max + "&deg;C </span> <br>" +
-									"<span class='info'> Wind speed: " + result.wind.speed + " mps </span> <br>" +
-									"<span class='info'> Wind direction: " + result.wind.deg + "&deg </span>";
+					contentString =  "<span class='info'>" + title_inside + " </span> <br>";
+					contentString += (typeof result.weather[0].main === "undefined") ? "" : "<span class='info'> Weather: "	+ result.weather[0].main + "</span> <br>";
+					contentString += (typeof result.weather[0].icon === "undefined") ? "" : "<img src= " + newIcon + "> <br>";
+					contentString += (typeof result.visibility === "undefined") ? "" : "<span class='info'> Visibility: " + result.visibility + " m </span> <br>";
+					contentString += (typeof result.main.temp === "undefined") ? "" : "<span class='info'> Temperature: " + result.main.temp + "&deg;C </span> <br>";
+					contentString += (typeof result.main.temp_min === "undefined") ? "" : "<span class='info'> Min temperature: " + result.main.temp_min + "&deg;C </span> <br>";
+					contentString += (typeof result.main.temp_max === "undefined") ? "" : "<span class='info'> Max temperature: " + result.main.temp_max + "&deg;C </span> <br>";
+					contentString += (typeof result.wind.speed === "undefined") ? "" : "<span class='info'> Wind speed: " + result.wind.speed + " mps </span> <br>";
+					contentString += (typeof result.wind.deg === "undefined") ? "" : "<span class='info'> Wind direction: " + result.wind.deg + "&deg </span>";
 					//Set infowindow data
 					infoWindow.setContent('<div style= "text-align:left; ">' + contentString + '</div>');
 				},
