@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Luiz C R Junior">
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <title> Aeroportos RJ </title>
+</head>
+<body>
+  <header>
+		<div class="container-fluid">
+			<h1 class="text-center"> Aeroportos do Estado do Rio de Janeiro </h1>
+		</div>
+	</header>
+  <main class="container-fluid">
+		<div class="row">
+			<div class="col-sm">
+				<nav class="nav-bar">
+					<h2 class="text-center"> Filtre o aeroporto </h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm">
+              </div>
+              <div class="col-sm">
+                <input class="form-control text-center " id="places-filter"  data-bind="value: filteredInput, valueUpdate: 'afterkeydown'" type="search" placeholder="(Nome do Aeroporto)">
+              </div>
+              <div class="col-sm"> </div>
+            </div>
+          </div>
+          <div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm">
+                </div>
+                <div class="col-sm">
+                  <ul class="places-list" id="filtered-list" data-bind="foreach: meusPontos">
+                    <p class="places" href="#" data-bind="text: title, click: $parent.showLocation, visible: show"></p>
+                  </ul>
+                </div>
+                <div class="col-sm"> </div>
+              </div>
+            </div>
+					</div>
+				</nav>
+		</div>
+    </div>
+
+    <!-- Google Maps -->
+    <div id="map" class="map"></div>
+
+  </main>
+</body>
+<!-- JQUERY -->
+<script src="js/library/jquery-3.3.1.min.js"></script>
+  <!-- Knockout.js -->
+<script src="js/library/knockout-3.2.0.js"></script>
+<!-- JavaScript local file -->
+<script src="js/data/lista.js"></script>
+<script src="js/app.js"></script>
+<!-- Load GOOGLE MAPS API ASYNCHRONOUSLY -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgkp-sXMmXFRUCgTKv8293cUTEc3Snq94&callback=initApp" onerror="mapaError()"></script>
+
+</html>
